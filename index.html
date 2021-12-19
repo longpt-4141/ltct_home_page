@@ -32,12 +32,12 @@ header .logo{
 /* NAV */
 nav{
     margin: 30px 0;
-    padding: 0 20px;
+    padding: 0 40px 0 20px;
 }
 .banner {
-    background-image: url('./background.svg');
+    background-image: url('./Group 49.svg');
     background-repeat: no-repeat;
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
     border-radius:10px;
 }
@@ -223,10 +223,12 @@ nav{
   font-size: 12px;
 }
 .home-section {
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px;
     border-radius:10px;
     width: 100%;
     margin: 0 20px 0 60px;
-    background: #E4E9F7;
+    background: #fff;
     min-height: 100vh;
     top: 0;
     left: 78px;
@@ -283,13 +285,47 @@ footer{
 .pc-footer__right-border{
     margin: 0 5px;
 }
+
+/*  */
+.question_content{
+  padding: 10px 10px 10px 60px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin-bottom: 30px;
+}
+li a {
+  color: #005B89;
+  font-size:18px;
+
+}
+li a:hover{
+  text-decoration: none;
+}
+.security-section,.services-section{
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px;
+    border-radius:10px;
+    width: 100%;
+    margin: 0 20px 0 60px;
+    background: #fff;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
     </style>
 </head>
 <body>
     <header>
         <div class="contain">
             <div class="logo">
-                <a href="#">
+                <a href="/">
                     <img src="./logo.svg" alt="">
                 </a>
             </div>
@@ -310,28 +346,28 @@ footer{
                     <i class='bx bx-menu' id="btn" ></i>
                     </div>
                     <ul class="nav-list">
-                    <li>
-                        <a href="#">
+                    <li class="menu_item active">
+                        <a href="/">
                         <i class='bx bx-grid-alt'></i>
                         <span class="links_name">Dashboard</span>
                         </a>
                         <span class="tooltip">Dashboard</span>
                     </li>
-                    <li>
+                    <li class="menu_item">
                     <a href="#">
                         <i class='bx bx-user' ></i>
                         <span class="links_name">Đổi Trả</span>
                     </a>
                     <span class="tooltip">Đổi Trả</span>
                     </li>
-                    <li>
+                    <li class="menu_item">
                     <a href="#">
                         <i class='bx bx-chat' ></i>
                         <span class="links_name">Nhắn tin</span>
                     </a>
                     <span class="tooltip">Nhắn tin</span>
                     </li>
-                    <li>
+                    <li class="menu_item">
                     <a href="#">
                         <i class='bx bx-pie-chart-alt-2' ></i>
                         <span class="links_name">Feedback</span>
@@ -340,8 +376,303 @@ footer{
                     </li>
                     </ul>
                 </div>
-                <section class="home-section">
-                    <div class="text">Dashboard</div>
+                <section class="home-section " >
+                    <div class="text">Các câu hỏi thường gặp </div>
+                    <div class="question_content">
+                      <ul>
+                        <li>
+                          <a href="">
+                            [Thành viên mới] Cách theo dõi Tình Trạng Vận Chuyển Của Đơn Hàng
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Người bán] Làm thế nào để bắt đầu bán hàng trên Shopee?
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Tài khoản Shopee] Tại sao tài khoản Shopee của tôi bị khóa/bị giới hạn?
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Thông tin vận chuyển] Làm sao để liên hệ Đơn vị vận chuyển/tra cứu thông tin vận chuyển/hối giao hàng?
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Covid] Cẩm Nang Mua Sắm
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Tài khoản Shopee] Tại sao tôi không nhận được Mã xác minh (OTP)?
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Đơn hàng] Tôi có thể hủy đơn hàng không?
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Thành viên mới] Cách theo dõi Tình Trạng Vận Chuyển Của Đơn Hàng
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            [Thành viên mới] Quy trình trả hàng hoàn tiền của Shopee
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                </section>
+                <section class="security-section" >
+                  <div class="container content">
+                    <div id="title" style="text-align: center; font-size: 28px; margin: 20px 0 30px 0;">CHÍNH SÁCH BẢO MẬT</div>
+                    <h1  style="text-align:center;margin-left:0in;">
+                    </h1>
+                <p>
+              <span style="font-size:10px;">
+              </span></p><p class="MsoNormal" style="text-align:justify;">
+                <b>1.
+            GIỚI THIỆU</b>
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                1.1. Chào mừng bạn đến với nền tảng Shopee.vn
+            (bao gồm website và ứng dụng di động Shopee) được được vận hành bởi Công ty
+            TNHH Shopee và các công ty liên kết (gọi riêng và gọi chung là,
+            "Shopee", "chúng tôi", hay "của chúng tôi").
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                1.2 "Dữ Liệu Cá Nhân" hay "dữ liệu
+            cá nhân" có nghĩa là dữ liệu, dù đúng hay không, về một cá nhân mà thông
+            qua đó có thể được xác định được danh tính, hoặc từ dữ liệu đó và thông tin
+            khác mà một tổ chức có hoặc có khả năng tiếp cận. Các ví dụ thường gặp về dữ liệu
+            cá nhân có thể gồm có tên, số chứng minh nhân dân và thông tin liên hệ.
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                1.3 Bằng việc sử dụng Các Dịch Vụ, đăng ký một
+            tài khoản với chúng tôi hoặc truy cập Nền tảng, bạn xác nhận và đồng ý rằng bạn
+            chấp nhận các phương pháp, yêu cầu, và/hoặc chính sách được mô tả trong Chính
+            sách bảo mật này, và theo đây bạn đồng ý cho phép chúng tôi thu thập, sử dụng,
+            tiết lộ và/hoặc xử lý dữ liệu cá nhân của bạn như mô tả trong đây. 
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                1.4. Chính sách này áp dụng cùng với các thông
+            báo, điều khoản hợp đồng, điều khoản chấp thuận khác áp dụng liên quan đến việc
+            chúng tôi thu thập, lưu trữ, sử dụng, tiết lộ và/hoặc xử lý dữ liệu cá nhân của
+            bạn và không nhằm ghi đè những thông báo hoặc các điều khoản đó trừ khi chúng
+            tôi có tuyên bố ràng khác.
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                1.5. Chính sách này được áp dụng cho cả Người
+            bán và Người mua đang sử dụng Dịch vụ trừ khi có tuyên bố rõ ràng ngược lại.
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                <b></b>
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                <b>2.</b>&nbsp;<b>KHI
+            NÀO SHOPEE SẼ THU THẬP DỮ LIỆU CÁ NHÂN?</b>
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                2.1. Chúng tôi sẽ/có thể thu thập dữ liệu cá
+            nhân về bạn:
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn đăng ký và/hoặc sử dụng Các Dịch
+            Vụ hoặc Nền tảng của chúng tôi, hoặc mở một tài khoản với chúng tôi;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn gửi bất kỳ biểu mẫu nào, bao gồm
+            đơn đăng ký hoặc các mẫu đơn khác liên quan đến bất kỳ sản phẩm và dịch vụ nào
+            của chúng tôi, bằng hình thức trực tuyến hay dưới hình thức khác;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn ký kết bất kỳ thỏa thuận nào hoặc
+            cung cấp các tài liệu hoặc thông tin khác liên quan đến tương tác giữa bạn với
+            chúng tôi, hoặc khi bạn sử dụng các sản phẩm và dịch vụ của chúng tôi;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn tương tác với chúng tôi, chẳng hạn
+            như thông qua các cuộc gọi điện thoại (có thể được ghi âm lại), thư từ, fax, gặp
+            gỡ trực tiếp, các nền ứng dụng truyền thông xã hội và email;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn sử dụng các dịch vụ điện tử của
+            chúng tôi, hoặc tương tác với chúng tôi qua Nền tảng hoặc Trang Web hoặc Các Dịch
+            Vụ của chúng tôi. Trường hợp này bao gồm thông qua tập tin cookie mà chúng tôi
+            có thể triển khai khi bạn tương tác với các Nền tảng hoặc Trang Web của chúng
+            tôi;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn cấp quyền trên thiết bị của bạn để
+            chia sẻ thông tin với ứng dụng hoặc Nền tảng của chúng tôi
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Khi bạn liên kết tài khoản Shopee với tài
+            khoản mạng xã hội của bạn hoặc các tài khoản bên ngoài khác hoặc sử dụng các
+            tính năng mạng xã hội khác, phù hợp với các chính sách của nhà cung cấp
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi
+            bạn thực hiện các giao dịch thông qua Dịch vụ của chúng tôi;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi
+            bạn cung cấp ý kiến phản hồi hoặc gửi khiếu nại cho chúng tôi;
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;background:white;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi bạn đăng ký tham gia một cuộc thi; hoặc
+              </p>
+              <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.25in;">
+                ●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            khi
+            bạn gửi dữ liệu cá nhân của bạn cho chúng tôi vì bất kỳ lý do gì.
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                Các trường hợp trên không nhằm mục đích liệt kê
+            đầy đủ các trường hợp và chỉ đưa ra một số trường hợp phổ biến về thời điểm dữ
+            liệu cá nhân của bạn có thể bị thu thập
+              </p>
+              <p class="MsoNormal" style="text-align:justify;">
+                <b></b>
+              </p>
+                </div>
+                </section>
+                <section class="services-section">
+                  <div class="container content">
+                    <div id="title">ĐIỀU KHOẢN DỊCH VỤ</div>
+                      <p>
+                        <br>
+                      </p>
+                      <p>
+                        <br>
+                      </p>
+                      <p class="MsoNormal" style="background:white;">
+                        <b><span style="color:#000000;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      GIỚI THIỆU</span></b> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chào mừng bạn
+                      đến với sàn giao dịch thương mại điện tử Shopee qua giao diện website hoặc ứng
+                      dụng di động (“Trang Shopee”). Trước khi sử dụng Trang Shopee hoặc tạo tài
+                      khoản Shopee (“Tài Khoản”), vui lòng đọc kỹ các&nbsp;</span><b><span style="color:#000000;">Điều Khoản Dịch
+                      Vụ&nbsp;</span></b><span style="color:#000000;">dưới đây và&nbsp;</span><b><span style="color:#000000;">Quy Chế Hoạt Động Sàn Giao Dịch Thương Mại Điện
+                      Tử Shopee</span></b><span style="color:#000000;">&nbsp;để hiểu rõ quyền lợi và nghĩa vụ hợp pháp của mình đối với
+                      Công ty TNHH Shopee và các công ty liên kết và công ty con của Shopee (sau đây
+                      được gọi riêng là “Shopee”, gọi chung là “chúng tôi”, “của chúng tôi”).</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">1.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dịch Vụ bao
+                      gồm dịch vụ sàn giao dịch trực tuyến kết nối người tiêu dùng với nhau nhằm mang
+                      đến cơ hội kinh doanh giữa người mua (“Người Mua”) và người bán (“Người Bán”)
+                      (gọi chung là “bạn”, “Người Sử Dụng” hoặc “Các Bên”).</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trước khi trở
+                      thành Người Sử Dụng của Trang Shopee, bạn cần đọc và chấp nhận mọi điều khoản
+                      và điều kiện được quy định trong, và dẫn chiếu đến, Điều Khoản Dịch Vụ này và
+                      Chính Sách Bảo Mật được dẫn chiếu theo đây.</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">1.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopee bảo
+                      lưu quyền thay đổi, chỉnh sửa, tạm ngưng hoặc chấm dứt tất cả hoặc bất kỳ phần
+                      nào của Trang Shopee hoặc Dịch Vụ vào bất cứ thời điểm nào theo qui định pháp
+                      luật. Phiên Bản thử nghiệm của Dịch Vụ hoặc tính năng của Dịch Vụ có thể không
+                      hoàn toàn giống với phiên bản cuối cùng.</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">1.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopee bảo
+                      lưu quyền từ chối yêu cầu mở Tài Khoản hoặc các truy cập của bạn tới Trang
+                      Shopee hoặc Dịch Vụ theo quy định pháp luật và Điều khoản dịch vụ.</span> 
+                      </p>
+                      <p class="MsoNormal" style="text-align:justify;background:white;">
+                        <span style="color:#000000;">BẰNG VIỆC SỬ DỤNG DỊCH VỤ HAY TẠO TÀI
+                      KHOẢN TẠI SHOPEE, BẠN ĐÃ CHẤP NHẬN VÀ ĐỒNG Ý VỚI NHỮNG ĐIỀU KHOẢN DỊCH VỤ NÀY
+                      VÀ CHÍNH SÁCH BỔ SUNG ĐƯỢC DẪN CHIẾU THEO ĐÂY.</span> 
+                        </p>
+                      <p class="MsoNormal" style="text-align:justify;background:white;">
+                        <b><span style="color:#000000;">&nbsp;</span></b> 
+                      </p>
+                      <p class="MsoNormal" style="text-align:justify;background:white;">
+                        <b><span style="color:#000000;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      QUYỀN RIÊNG TƯ</span></b> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopee coi
+                      trọng việc bảo mật thông tin của bạn. Để bảo vệ quyền lợi người dùng, Shopee
+                      cung cấp Chính Sách Bảo Mật tại Shopee.vn để giải thích chi tiết các hoạt động
+                      bảo mật của Shopee. Vui lòng tham khảo Chính Sách Bảo Mật để biết cách thức
+                      Shopee thu thập và sử dụng thông tin liên quan đến Tài Khoản và/hoặc việc sử
+                      dụng Dịch Vụ của Người Sử Dụng (“Thông Tin Người Sử Dụng”). Điều Khoản Dịch Vụ
+                      này có liên quan mật thiết với Chính Sách Bảo Mật. Bằng cách sử dụng Dịch Vụ
+                      hoặc cung cấp thông tin trên Trang Shopee, Người Sử Dụng:</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:1.0in;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">a.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      cho phép Shopee thu thập, sử dụng, công bố và/hoặc xử lý các Nội Dung, dữ liệu
+                      cá nhân của bạn và Thông Tin Người Sử Dụng như được quy định trong Chính Sách
+                      Bảo Mật;</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:1.0in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">b.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      đồng ý và công nhận rằng các thông tin được cung cấp trên Trang Shopee sẽ
+                      thuộc sở hữu chung của bạn và Shopee; và</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:1.0in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">c.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sẽ
+                      không, dù là trực tiếp hay gián tiếp, tiết lộ các Thông Tin Người Sử Dụng cho
+                      bất kỳ bên thứ ba nào, hoặc bằng bất kỳ phương thức nào cho phép bất kỳ bên thứ
+                      ba nào được truy cập hoặc sử dụng Thông Tin Người Dùng của bạn.</span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trường hợp
+                      Người Sử Dụng sở hữu dữ liệu cá nhân của Người Sử Dụng khác thông qua việc sử
+                      dụng Dịch Vụ (“Bên Nhận Thông Tin”) theo đây đồng ý rằng, mình sẽ (i) tuân thủ
+                      mọi qui định pháp luật về bảo vệ an toàn thông tin cá nhân liên quan đến những
+                      thông tin đó; (ii) cho phép Người Sử Dụng là chủ sở hữu của các thông thông tin
+                      cá nhân mà Bên Nhận Thông Tin thu thập được (“Bên Tiết Lộ Thông Tin”) được phép
+                      xóa bỏ thông tin của mình được thu thập từ cơ sở dữ liệu của Bên Nhận Thông
+                      Tin; và (iii) cho phép Bên Tiết Lộ Thông Tin rà soát những thông tin đã được
+                      thu thập về họ bởi Bên Nhận Thông Tin, phù hợp với hoặc theo yêu cầu của các
+                      qui định pháp luật hiện hành.</span> 
+                      </p>
+                      <p class="MsoNormal" style="text-align:justify;background:white;">
+                        <b><span style="color:#000000;">&nbsp;</span></b> 
+                      </p>
+                      <p class="MsoNormal" style="text-align:justify;background:white;">
+                        <b><span style="color:#000000;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      GIỚI HẠN TRÁCH NHIỆM</span></b> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">3.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopee trao
+                      cho Người Sử Dụng quyền phù hợp để truy cập và sử dụng các Dịch Vụ theo các
+                      điều khoản và điều kiện được quy định trong Điều Khoản Dịch Vụ này. Tất cả các
+                      Nội Dung, thương hiệu, nhãn hiệu dịch vụ, tên thương mại, biểu tượng và tài sản
+                      sở hữu trí tuệ khác độc quyền (“Tài Sản Sở Hữu Trí Tuệ”) hiển thị trên Trang
+                      Shopee đều thuộc sở hữu của Shopee và bên sở hữu thứ ba, nếu có. </span> 
+                      </p>
+                      <p class="MsoNormal" style="margin-left:.5in;text-align:justify;text-indent:-.5in;background:white;">
+                        <span style="color:#000000;">3.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shopee cho
+                      phép kết nối từ website Người Sử Dụng đến Trang Shopee, với điều kiện website
+                      của Người Sử Dụng không được hiểu là bất kỳ việc xác nhận hoặc liên quan nào
+                      đến Shopee.</span> 
+                        </p>
+                </div>
                 </section>
             </div>
         </div>
@@ -367,10 +698,10 @@ footer{
                         <a href="#" >Điều khoản SP21</a>
                     </div>
                     <div class="pc-footer__text pc-footer__right-border" >
-                        <a href="#" >Điều khoản dịch vụ</a>
+                        <a class = "choice_sv" href="#" >Điều khoản dịch vụ</a>
                     </div>
-                    <div class="pc-footer__text pc-footer__right-border" >
-                        <a href="#" >Chính sách riêng tư</a>
+                    <div class="pc-footer__text pc-footer__right-border " >
+                        <a class ="choice_sc" href="#" >Chính sách riêng tư</a>
                     </div>
                 </div>
             </div>
@@ -394,6 +725,25 @@ footer{
            closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
          }
         }
+        let securityChoice = document.querySelector(".choice_sc");
+        let serviceChoice = document.querySelector(".choice_sv");
+        console.log(securityChoice);
+        let homePage = document.querySelector(".home-section");
+        let securityPage = document.querySelector(".security-section");
+        let servicePage = document.querySelector(".services-section");
+        
+        securityChoice.addEventListener("click",function(e){
+
+            homePage.style.display = "none";
+            servicePage.style.display = "none";
+          securityPage.style.display = "block";
+        })
+        serviceChoice.addEventListener("click",function(e){
+          homePage.style.display = "none";
+          securityPage.style.display = "none"
+          servicePage.style.display = "block";
+        })
+        
         </script>
 </body>
 </html>
