@@ -9,7 +9,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+ <!-- Icons font CSS-->
+ <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+ <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+ <!-- Font special for pages-->
+ <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+ <!-- Vendor CSS-->
+ <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+ <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+        <!-- Main CSS-->
+        <link href="css/main.css" rel="stylesheet" media="all">
     <title>SP21</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -306,7 +316,7 @@ li a {
 li a:hover{
   text-decoration: none;
 }
-.security-section,.services-section{
+.security-section,.services-section,.return-section{
   display: none;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px;
     border-radius:10px;
@@ -319,7 +329,99 @@ li a:hover{
     transition: all 0.5s ease;
     z-index: 10;
 }
-    </style>
+
+input[type="radio"] 
+{ display: none; } 
+input[type="radio"] + label 
+{ font-weight: 400; font-size: 14px; } 
+input[type="radio"] + label span { 
+  display: inline-block; 
+  width: 18px; height: 18px; 
+  margin: -2px 10px 0 0; 
+  vertical-align: middle; 
+  cursor: pointer; -moz-border-radius: 50%; 
+  border-radius: 50%; 
+  border: 3px solid #ffffff; } 
+input[type="radio"] + label span 
+{ background-color: #fff; } 
+input[type="radio"]:checked + label { color: #333; font-weight: 700; } 
+input[type="radio"]:checked + label span { background-color: #ff8800; border: 2px solid #ffffff; box-shadow: 2px 2px 2px rgba(0,0,0,.1); } input[type="radio"] + label span, input[type="radio"]:checked + label span { -webkit-transition: background-color 0.24s linear; -o-transition: background-color 0.24s linear; -moz-transition: background-color 0.24s linear; transition: background-color 0.24s linear; }
+.switch {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -6% ;
+    width: 90px;
+    height: 36px;
+    text-align: center;
+    background: #00bc9c;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+  }
+  .switch span {
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    top: 50%;
+    left: 52%;
+    margin: -2px 0px 0px -4px;
+    background: #fff;
+    display: block;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease;
+  }
+  .switch span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 6px;
+    margin-top: -6px;
+    background: #fff;
+    transition: all 0.2s ease;
+  }
+  input[type=radio] {
+    display: none;
+  }
+  .switch label {
+    cursor: pointer;
+    color: rgba(0,0,0,0.2);
+    width: 60px;
+    line-height: 38px;
+    transition: all 0.2s ease;
+  }
+  label[for=yes] {
+    position: absolute;
+    left: -6px;
+    font-size: 11px;
+  }
+  label[for=no] {
+    position: absolute;
+    right: -6px;
+    font-size: 11px;
+  }
+  #no:checked ~ .switch {
+    background: #eb4f37;
+  }
+  #no:checked ~ .switch span {
+    background: #fff;
+    margin-left: -8px;
+  }
+  #no:checked ~ .switch span:after {
+    background: #fff;
+    height: 12px;
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+  #yes:checked ~ .switch label[for=yes] {
+    color: #fff;
+  }
+  #no:checked ~ .switch label[for=no] {
+    color: #fff;
+  }
+.btn--blue{
+  background-color: rgb(0,91,137);
+}
+</style>
 </head>
 <body>
     <header>
@@ -353,7 +455,7 @@ li a:hover{
                         </a>
                         <span class="tooltip">Dashboard</span>
                     </li>
-                    <li class="menu_item">
+                    <li class="menu_item choice_rt">
                     <a href="#">
                         <i class='bx bx-user' ></i>
                         <span class="links_name">Đổi Trả</span>
@@ -674,6 +776,149 @@ li a:hover{
                         </p>
                 </div>
                 </section>
+                <section class="return-section">
+                  <div class="card card-4">
+                    <div class="card-body">
+                        <h2 class="title">Product Return</h2>
+                        <form method="POST">
+                          <h4 style="margin-bottom: 20px">1. Order information</h4>
+                            <div class="row row-space">
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="input-group">
+                                        <label class="label">first name</label>
+                                        <input class="input--style-4" type="text" name="first_name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-12">
+                                    <div class="input-group">
+                                        <label class="label">last name</label>
+                                        <input class="input--style-4" type="text" name="last_name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                              <div class="col-md-6 col-xs-12">
+                                  <div class="input-group">
+                                      <label class="label">E-Mail</label>
+                                      <input class="input--style-4" type="email" name="email">
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-xs-12">
+                                  <div class="input-group">
+                                      <label class="label">Telephone</label>
+                                      <input class="input--style-4" type="tel" name="telephone">
+                                  </div>
+                              </div>
+                          </div>
+                            <div class="row row-space">
+                                <div class="col-md-4 col-xs-3">
+                                    <div class="input-group">
+                                        <label class="label">Birthday</label>
+                                        <div class="input-group-icon input-group">
+                                            <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-xs-0 "></div>
+
+                                <div class="col-md-6 col-xs-3">
+                                  <div class="input-group">
+                                      <label class="label">Order ID</label>
+                                      <div class="input-group">
+                                          <input class="input--style-4" type="text" name="order_id">
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <label class="label">Phone Number</label>
+                                        <input class="input--style-4" type="text" name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                          <h4 style="margin-bottom: 20px">2. Product information</h4>
+                          <div class="row row-space">
+                            <div class="col-md-6 col-xs-12">
+                                <div class="input-group">
+                                    <label class="label">Product name</label>
+                                    <input class="input--style-4" type="text" name="product_name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div class="input-group">
+                                    <label class="label">Product code</label>
+                                    <input class="input--style-4" type="text" name="product_code">
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Quantity</label>
+                                    <input class="input--style-4" type="number" name="quantity">
+                                </div>
+                            </div>
+                          </div>
+                          <h5 style="margin-bottom: 20px; font-size: 16px">Reasons of Return</h5>
+                          <div style="margin-left : 40px" class="row">
+                          <div class="col-12"> 
+                            <input id="option-one" name="radio" value="one" checked="checked" type="radio"> 
+                            <label for="option-one"> 
+                              <span></span> Dead On Arrival
+                            </label> 
+                          </div> 
+                          <div class="col-12"> 
+                            <input id="option-two" name="radio" value="two" type="radio"> 
+                            <label for="option-two"> <span></span> Faulty, please supply details
+                            </label> 
+                          </div>
+                          <div class="col-12"> 
+                            <input id="option-three" name="radio" value="three" type="radio"> 
+                            <label for="option-three"> <span></span> Order error
+                            </label> 
+                          </div>
+                          <div class="col-12"> 
+                            <input id="option-four" name="radio" value="four" type="radio"> 
+                            <label for="option-four"> <span></span> Others, please supply details
+                            </label> 
+                          </div>
+                          <div class="col-12"> 
+                            <input id="option-five" name="radio" value="five" type="radio"> 
+                            <label for="option-five"> <span></span> Received wrong Item
+                            </label> 
+                          </div>
+                        </div>
+                        <div style=" margin-top: 20px" class="row">
+                          <div  class="col-md-3 col-xs-12">
+                            <h5 style="font-size:16px">Product is opened? </h5>
+                          </div>
+                          <div class="col-md-6 toggle-radio">
+                            <input type="radio" name="rdo" id="yes" checked>
+                            <input type="radio" name="rdo" id="no">
+                            <div class="switch">
+                              <label for="yes">Yes</label>
+                              <label for="no">No</label>
+                              <span></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <div class="col-12">
+                            <label style="font-size:16px; margin:30px 0 20px 0" for="exampleFormControlTextarea1">Faulty or other details</label>
+                            <textarea placeholder="Faulty or other details" class="form-control col-12" id="exampleFormControlTextarea1" rows="4"></textarea>
+                          </div>
+                        </div>
+                            <div style=" margin-top: 20px;"
+                            class="p-t-15">
+                                <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </section>
             </div>
         </div>
     </container>
@@ -727,23 +972,42 @@ li a:hover{
         }
         let securityChoice = document.querySelector(".choice_sc");
         let serviceChoice = document.querySelector(".choice_sv");
+        let returnProChoice = document.querySelector(".choice_rt");
         console.log(securityChoice);
         let homePage = document.querySelector(".home-section");
         let securityPage = document.querySelector(".security-section");
         let servicePage = document.querySelector(".services-section");
+        let returnProPage = document.querySelector(".return-section");
         
         securityChoice.addEventListener("click",function(e){
 
             homePage.style.display = "none";
             servicePage.style.display = "none";
+            returnProPage.style.display = "none";
           securityPage.style.display = "block";
         })
         serviceChoice.addEventListener("click",function(e){
           homePage.style.display = "none";
-          securityPage.style.display = "none"
+          securityPage.style.display = "none";
+          returnProPage.style.display = "none";
           servicePage.style.display = "block";
+        })
+        returnProChoice.addEventListener("click",function(e){
+          homePage.style.display = "none";
+          securityPage.style.display = "none";
+          returnProPage.style.display = "block";
+          servicePage.style.display = "none";
         })
         
         </script>
+            <!-- Jquery JS-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <!-- Vendor JS-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <script src="vendor/datepicker/moment.min.js"></script>
+        <script src="vendor/datepicker/daterangepicker.js"></script>
+
+        <!-- Main JS-->
+        <script src="js/global.js"></script>
 </body>
 </html>
